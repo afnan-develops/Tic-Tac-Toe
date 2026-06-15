@@ -1,0 +1,288 @@
+:root {
+  --bgc: #2f323a;
+  --boxc: #494e5a;
+  --oc: #fff047;
+  --xc: #ff4754;
+  --accentc: #848a9a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bgc);
+  font-family: "Outfit";
+}
+
+.container {
+  padding: 70px 0;
+  height: 100vh;
+  max-width: 100%;
+}
+
+/* SELECTION
+.selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bgc);
+  border: 4px solid var(--boxc);
+  width: 50%;
+  height: 160px;
+  position: fixed;
+  z-index: 10;
+  top: 40%;
+  left: 25%;
+}
+
+.selection h3 {
+  color: var(--accentc);
+  font-size: 1.5rem;
+}
+
+.selection-symbol {
+  display: flex;
+  gap: 25px;
+  padding: 5px;
+  position: relative;
+  bottom: 7px;
+}
+
+.selection-symbol .X,
+.selection-symbol .O {
+  border: 3px solid var(--boxc);
+  padding: 5px 20px;
+  background-color: var(--bgc);
+  font-family: "Outfit";
+  cursor: pointer;
+}
+
+.hidden-selection {
+  display: none;
+} */
+
+/* Head */
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 88px;
+}
+
+.X {
+  color: var(--xc);
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+.O {
+  color: var(--oc);
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+#turn {
+  width: 140px;
+  background-color: var(--boxc);
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background-color: var(--boxc);
+  color: var(--accentc);
+  box-shadow: inset 0 -4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  right: 20px;
+  margin: 0 10px;
+}
+
+#reset {
+  background-color: var(--accentc);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 9px;
+  cursor: pointer;
+  display: flex;
+  box-shadow: inset 0 -4px rgba(0, 0, 0, 0.5);
+}
+
+#reset img {
+  width: 25px;
+  height: 25px;
+}
+
+/* Main Body */
+
+.row-1,
+.row-2,
+.row-3 {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.boxes {
+  height: 140px;
+  width: 140px;
+  background-color: var(--boxc);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: inset 0 -8px rgba(0, 0, 0, 0.5);
+  font-size: 5rem;
+  font-family: "Outfit";
+  font-weight: 700;
+}
+
+/* Foot */
+
+.foot {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.x-score {
+  background-color: var(--xc);
+  color: var(--bgc);
+  width: 140px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  height: 69px;
+  line-height: 1.5;
+}
+
+.ties {
+  background-color: var(--accentc);
+  color: var(--bgc);
+  width: 140px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  height: 69px;
+  line-height: 1.5;
+}
+
+.o-score {
+  background-color: var(--oc);
+  color: var(--bgc);
+  width: 140px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  height: 69px;
+  line-height: 1.5;
+}
+
+.x-score span,
+.ties span,
+.o-score span {
+  position: relative;
+  top: 11%;
+}
+
+#p1Score,
+#ties,
+#p2Score {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Winner Screen */
+
+.winner-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #373b43;
+  width: 100%;
+  height: 200px;
+  position: fixed;
+  z-index: 10;
+  top: 38%;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.winner1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#winnerSymbol {
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+.winner-screen h3 {
+  color: var(--accentc);
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
+
+.new-game {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--accentc);
+  color: var(--bgc);
+  font-size: 1.2rem;
+  font-family: "Outfit";
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.winner-hidden {
+  display: none;
+}
+
+.inactive {
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.3;
+}
+
+/* Tie */
+
+.tie-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #373b43;
+  width: 100%;
+  height: 200px;
+  position: fixed;
+  z-index: 10;
+  top: 38%;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.tie-screen h3 {
+  color: var(--accentc);
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
+
+.tie-hidden {
+  display: none;
+}
+
+@media (max-width: 340px) {
+  .x-score {
+    background-color: antiquewhite;
+  }
+}

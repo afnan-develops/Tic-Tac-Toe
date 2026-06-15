@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <!-- SELECTION
+<div class="selection ">
+    <h3>Select Your Symbol</h3>
+    <div class="selection-symbol">
+        <button class="X">X</button><button class="O">O</button>
+    </div>
+</div> -->
+
+    <!-- Head -->
+    <div class="container">
+      <div class="head">
+        <span><span class="X">X </span> <span class="O">O</span></span>
+        <span id="turn"></span>
+        <button id="reset"><img src="reset.png" alt="" /></button>
+      </div>
+
+      <!-- Main Body -->
+      <div class="play-area">
+        <div class="row-1">
+          <button class="boxes" data-index="0"></button>
+          <button class="boxes" data-index="1"></button>
+          <button class="boxes" data-index="2"></button>
+        </div>
+        <div class="row-2">
+          <button class="boxes" data-index="3"></button>
+          <button class="boxes" data-index="4"></button>
+          <button class="boxes" data-index="5"></button>
+        </div>
+        <div class="row-3">
+          <button class="boxes" data-index="6"></button>
+          <button class="boxes" data-index="7"></button>
+          <button class="boxes" data-index="8"></button>
+        </div>
+      </div>
+
+      <!-- Foot -->
+      <div class="foot">
+        <span class="x-score"
+          ><span>Player 1</span> <br />
+          <span id="p1Score">0</span></span
+        >
+        <span class="ties"
+          ><span>Ties</span> <br />
+          <span id="ties">0</span></span
+        >
+        <span class="o-score"
+          ><span>Player 2</span> <br />
+          <span id="p2Score">0</span></span
+        >
+      </div>
+    </div>
+
+    <!-- Winner  -->
+    <div class="winner-screen winner-hidden">
+      <div class="winner1">
+        <span id="winnerSymbol"></span>
+        <h3>&nbsp;has won the match</h3>
+      </div>
+      <button class="new-game">New Game</button>
+    </div>
+    
+    <!-- Tie -->
+    <div class="tie-screen tie-hidden">
+      <h3>The match was a Tie</h3>
+      <button class="new-game">New Game</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
